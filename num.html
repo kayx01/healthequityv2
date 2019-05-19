@@ -1,0 +1,90 @@
+    
+<html>
+    <head>
+            <!---<script src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="forum.css">
+    </head>
+    <body>
+
+        <h1>What would you like to know?</h1>
+            <p> 
+                We highly encourage you to ask any health related questions you're curious or unsure about so we can answer them for you. Your questions will be private. <br>
+                The more questions you ask, the more points you'll receive which means the more rewards and prizes will be sent to you :) <br>
+                We ask that you share with us the city you live in and the year you were born to help us give you personalised prizes and rewards *smiley face*</p>
+
+            </p>
+        <div class="content">
+
+            <h5> What would you like to know?</h5>
+
+            <form id="data">
+                <input type="number" name="year" placeholder="Year">
+                <input type="text" name="city" placeholder="City">
+                <input type="text" name="country" placeholder="Country">
+                <input type="text" name="question" placeholder="Submit a question of which answer you wwould like to know">
+                <button onclick="change()">Learn something new </button>
+                <!----<button id="star">Learn something new</button>
+                <button id="check-button">Check Permission</button>-->
+            </form>
+
+            <ul id="learn"></ul>
+
+        </div>
+<script>
+function change()
+
+{
+	swal({
+  title: "You're a star!",
+  text: "Rewards will be coming your way",
+  icon: "success",
+  button: "OK",
+});
+	
+}
+</script>
+       
+<!---<script>
+      $("#star").click(function(){
+        Push.create("Hello world!",{
+            body: "You're a star",
+            icon: 'badge96.png',
+            timeout: 1000,
+            onClick: function () {
+                window.focus();
+                this.close();
+            }
+        });
+      });
+      $("#clear-button").click(function(){ 
+           Push.clear();
+      });
+      $("#check-button").click(function(){ 
+            console.log(Push.Permission.has());
+      });
+ </script>-->
+            
+            
+        
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAM89g5Fu7aQjIkLpb0K-eTj_aDRMNsp_g",
+    authDomain: "healthcare-database.firebaseapp.com",
+    databaseURL: "https://healthcare-database.firebaseio.com",
+    projectId: "healthcare-database",
+    storageBucket: "healthcare-database.appspot.com",
+    messagingSenderId: "148788781258"
+  };
+  firebase.initializeApp(config);
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+</script>
+<script src="num.js"></script>
+<script src="push.js"></script>
+    </body>
+</html>

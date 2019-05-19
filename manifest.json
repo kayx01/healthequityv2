@@ -1,0 +1,25 @@
+/*{
+    "gcm_sender_id": "103953800507"
+  }*/
+
+{
+ "manifest_version": 2,
+
+  "name": "Health",
+  "description": "Quick launch Health",
+  "version": "1.0.0",
+  "icons": { "128": "badge96.png" },
+  "browser_action": {
+    "default_icon": "badge96.png",
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab"]
+}
+
+/*"app": {
+    "background": {
+      "scripts": ["OneSignal.js", "background.js"]
+    }
+  },
+  
+  "permissions": ["gcm", "storage", "notifications", "identity", "browser"],*/

@@ -1,0 +1,51 @@
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+
+nav {
+
+    width: 100%; 
+	position: absolute;
+	z-index: 1; 
+	top: 0;
+	left: 0; 
+	height: 100px;
+	font-size: 25px;
+  
+	text-align: right;
+	line-height: 70px;
+
+	background-color: #ACB6E5;
+}
+
+#nav-mobile {
+	margin-right: 100px;
+}
+
+ul {
+	list-style: none;
+}
+
+ul li a{
+	text-align: left;
+	display: inline;
+	text-decoration: none;
+	color: black;
+}
+
+
+.modal {
+    border: black;
+	border-radius: 20px;
+	display: block;
+}
+
+h4 {
+	padding-top: 50px;
+}
+
+.account-details {
+	height: 50px;
+	background: #ACB6E5;
+}
